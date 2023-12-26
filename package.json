@@ -10,6 +10,11 @@
   "dependencies": {
     "@slidev/cli": "^0.46.1",
     "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
+    "@slidev/theme-seriph": "latest",
+    "fp-ts": "^2.16.1",
+    "io-ts": "^2.2.21",
+    "io-ts-types": "^0.5.19",
+    "monocle-ts": "^2.3.13",
+    "newtype-ts": "^0.3.5"
   }
 }
