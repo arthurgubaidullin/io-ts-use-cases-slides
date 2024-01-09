@@ -2,7 +2,9 @@
   "name": "@w/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many -t build,test,lint --fix"
+  },
   "private": true,
   "devDependencies": {
     "@nx/eslint": "17.2.8",
