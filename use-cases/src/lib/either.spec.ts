@@ -1,5 +1,6 @@
 import * as E from 'fp-ts/Either';
 import { identity, pipe } from 'fp-ts/function';
+import { fail } from 'assert/strict';
 
 const pirojok = 'pirojok';
 const cake = 'cake';
@@ -10,6 +11,15 @@ describe('Either', () => {
 
     expect(E.isRight(result)).toBeTruthy();
   });
+
+  it('should construct right string (alt syntax)', () =>
+    pipe(
+      E.right(pirojok) satisfies E.Either<Error, string>,
+      E.fold(
+        () => fail(),
+        (result) => expect(result).toBeTruthy()
+      )
+    ));
 
   it('should construct left string', () => {
     const result = E.left(cake);
