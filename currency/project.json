@@ -1,0 +1,30 @@
+{
+  "name": "currency",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "currency/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/currency",
+        "main": "currency/src/index.ts",
+        "tsConfig": "currency/tsconfig.lib.json",
+        "assets": ["currency/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "currency/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
