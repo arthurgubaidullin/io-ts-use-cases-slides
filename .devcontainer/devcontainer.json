@@ -20,7 +20,9 @@
       "extensions": [
         "EditorConfig.EditorConfig",
         "eamodio.gitlens",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "firsttris.vscode-jest-runner"
       ]
     }
   },
