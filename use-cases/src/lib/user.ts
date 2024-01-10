@@ -9,7 +9,7 @@ export type User = {
 export type DecodedUser = t.TypeOf<typeof User>;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _ = (u: User): DecodedUser => identity(u);
+const _: (u: User) => DecodedUser = identity;
 
 export const User = t.type({
   name: t.string,
