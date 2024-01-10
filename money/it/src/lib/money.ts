@@ -15,7 +15,7 @@ export class Money {
     this.currency = struct.currency;
   }
 
-  public readonly add = (money: Money): E.Either<CurrencyMismatch, Money> => {
+  public add(money: Money): E.Either<CurrencyMismatch, Money> {
     return pipe(
       money,
       E.fromPredicate(
@@ -30,7 +30,7 @@ export class Money {
           })
       )
     );
-  };
+  }
 
   public equals(b: Money): boolean {
     return Eq.equals(this, b);
