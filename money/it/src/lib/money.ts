@@ -36,3 +36,8 @@ export class Money {
     return Eq.equals(this, b);
   }
 }
+
+export const add =
+  (money: Money) =>
+  (money2: Money): E.Either<CurrencyMismatch, Money> =>
+    money.add(money2);
