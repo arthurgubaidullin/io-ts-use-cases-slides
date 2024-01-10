@@ -4,12 +4,7 @@ import { pipe } from 'fp-ts/function';
 import * as Amount from './amount';
 import { CurrencyMismatch } from './currency-mismatch';
 import { Eq as _Eq, eqStrict, struct } from 'fp-ts/Eq';
-import { Int } from 'io-ts';
-
-type MoneyStruct = Readonly<{
-  amount: Int;
-  currency: Currency;
-}>;
+import { MoneyStruct } from './money-struct';
 
 const Eq: _Eq<Money> = struct({
   amount: eqStrict,
