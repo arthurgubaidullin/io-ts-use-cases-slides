@@ -2,7 +2,9 @@
   "name": "@w/zero-or-positive-int",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@w/number/positive-int": "*",
+    "io-ts": "^2.2.21"
   },
   "type": "commonjs",
   "main": "./src/index.js",
