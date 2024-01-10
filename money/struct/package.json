@@ -4,7 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "io-ts": "^2.2.21",
-    "@w/currency": "*"
+    "@w/currency": "*",
+    "@w/zero-or-positive-int": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

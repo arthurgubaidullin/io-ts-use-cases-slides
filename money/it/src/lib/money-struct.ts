@@ -1,7 +1,7 @@
 import { Currency } from '@w/currency';
-import { Int } from 'io-ts';
+import { ZeroOrPositiveInt } from '@w/zero-or-positive-int';
 
 export type MoneyStruct = Readonly<{
-  amount: Int;
+  amount: ZeroOrPositiveInt;
   currency: Currency;
 }>;

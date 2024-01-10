@@ -5,7 +5,8 @@
     "tslib": "^2.3.0",
     "io-ts": "^2.2.21",
     "fp-ts": "^2.16.2",
-    "@w/currency": "*"
+    "@w/currency": "*",
+    "@w/zero-or-positive-int": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
