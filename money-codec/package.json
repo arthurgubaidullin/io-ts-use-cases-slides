@@ -2,7 +2,11 @@
   "name": "@w/money-codec",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "fp-ts": "^2.16.2",
+    "io-ts": "^2.2.21",
+    "@w/money": "*",
+    "@w/money-struct": "*"
   },
   "type": "commonjs",
   "main": "./src/index.js",
