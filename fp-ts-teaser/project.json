@@ -1,0 +1,30 @@
+{
+  "name": "fp-ts-teaser",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "fp-ts-teaser/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/fp-ts-teaser",
+        "main": "fp-ts-teaser/src/index.ts",
+        "tsConfig": "fp-ts-teaser/tsconfig.lib.json",
+        "assets": ["fp-ts-teaser/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "fp-ts-teaser/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
