@@ -3,13 +3,8 @@ import * as E from 'fp-ts/Either';
 import { pipe } from 'fp-ts/function';
 import * as Amount from './amount';
 import { CurrencyMismatch } from './currency-mismatch';
-import { Eq as _Eq, eqStrict, struct } from 'fp-ts/Eq';
 import { MoneyStruct } from './money-struct';
-
-const Eq: _Eq<Money> = struct({
-  amount: eqStrict,
-  currency: eqStrict,
-});
+import { Eq } from './eq';
 
 export class Money {
   public readonly amount: Amount.Amount;
