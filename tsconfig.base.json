@@ -21,6 +21,7 @@
       "@w/money-codec": ["money/codec/src/index.ts"],
       "@w/money-struct": ["money/struct/src/index.ts"],
       "@w/number/positive": ["number/positive/src/index.ts"],
+      "@w/number/positive-int": ["number/positive-int/src/index.ts"],
       "@w/use-cases": ["use-cases/src/index.ts"]
     }
   },

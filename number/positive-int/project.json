@@ -1,0 +1,30 @@
+{
+  "name": "number-positive-int",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "number/positive-int/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/number/positive-int",
+        "main": "number/positive-int/src/index.ts",
+        "tsConfig": "number/positive-int/tsconfig.lib.json",
+        "assets": ["number/positive-int/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "number/positive-int/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
