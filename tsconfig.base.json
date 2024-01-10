@@ -19,6 +19,7 @@
       "@w/currency": ["currency/src/index.ts"],
       "@w/date-from-string": ["date-from-string/src/index.ts"],
       "@w/documents": ["documents/src/index.ts"],
+      "@w/exact-users": ["exact-users/src/index.ts"],
       "@w/fp-ts-teaser": ["fp-ts-teaser/src/index.ts"],
       "@w/money": ["money/it/src/index.ts"],
       "@w/money-codec": ["money/codec/src/index.ts"],
