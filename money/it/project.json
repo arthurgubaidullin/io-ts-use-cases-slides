@@ -1,17 +1,17 @@
 {
   "name": "money",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "money/src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "money/it/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/money",
-        "main": "money/src/index.ts",
-        "tsConfig": "money/tsconfig.lib.json",
-        "assets": ["money/*.md"]
+        "outputPath": "dist/money/it",
+        "main": "money/it/src/index.ts",
+        "tsConfig": "money/it/tsconfig.lib.json",
+        "assets": ["money/it/*.md"]
       }
     },
     "lint": {
@@ -22,7 +22,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "money/jest.config.ts"
+        "jestConfig": "money/it/jest.config.ts"
       }
     }
   },
