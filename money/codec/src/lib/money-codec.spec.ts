@@ -1,11 +1,11 @@
-import { pipe } from 'fp-ts/function';
 import { Money } from '@w/money';
-import { MoneyCodec } from './money-codec';
+import { ZeroOrPositiveInt } from '@w/zero-or-positive-int';
 import * as E from 'fp-ts/Either';
+import { pipe } from 'fp-ts/function';
 import * as PathReporter from 'io-ts/PathReporter';
-import * as t from 'io-ts';
+import { MoneyCodec } from './money-codec';
 
-const money = new Money({ amount: 10 as t.Int, currency: 'GEL' });
+const money = new Money({ amount: 10 as ZeroOrPositiveInt, currency: 'GEL' });
 
 describe('Money', () => {
   it('should encode & decode money class', () =>
