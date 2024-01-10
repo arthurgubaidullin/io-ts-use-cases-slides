@@ -1,0 +1,30 @@
+{
+  "name": "documents",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "documents/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/documents",
+        "main": "documents/src/index.ts",
+        "tsConfig": "documents/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "documents/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
