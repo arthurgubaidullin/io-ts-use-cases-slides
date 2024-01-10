@@ -1,0 +1,30 @@
+{
+  "name": "date-from-string",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "date-from-string/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/date-from-string",
+        "main": "date-from-string/src/index.ts",
+        "tsConfig": "date-from-string/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "date-from-string/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
