@@ -1,0 +1,30 @@
+{
+  "name": "zero-or-positive-int",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "number/zero-or-positive-int/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/number/zero-or-positive-int",
+        "main": "number/zero-or-positive-int/src/index.ts",
+        "tsConfig": "number/zero-or-positive-int/tsconfig.lib.json",
+        "assets": ["number/zero-or-positive-int/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "number/zero-or-positive-int/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
