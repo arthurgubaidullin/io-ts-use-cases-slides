@@ -1,0 +1,30 @@
+{
+  "name": "money-struct",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "money-struct/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/money-struct",
+        "main": "money-struct/src/index.ts",
+        "tsConfig": "money-struct/tsconfig.lib.json",
+        "assets": ["money-struct/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "money-struct/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
