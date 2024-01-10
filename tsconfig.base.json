@@ -18,6 +18,7 @@
     "paths": {
       "@w/currency": ["currency/src/index.ts"],
       "@w/money": ["money/src/index.ts"],
+      "@w/money-codec": ["money-codec/src/index.ts"],
       "@w/money-struct": ["money-struct/src/index.ts"],
       "@w/use-cases": ["use-cases/src/index.ts"]
     }

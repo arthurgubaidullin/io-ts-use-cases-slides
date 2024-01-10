@@ -1,0 +1,30 @@
+{
+  "name": "money-codec",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "money-codec/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/money-codec",
+        "main": "money-codec/src/index.ts",
+        "tsConfig": "money-codec/tsconfig.lib.json",
+        "assets": ["money-codec/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "money-codec/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
