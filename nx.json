@@ -42,5 +42,17 @@
       "!{projectRoot}/test-setup.[jt]s"
     ],
     "sharedGlobals": []
+  },
+  "generators": {
+    "@nx/js": {
+      "library": {
+        "unitTestRunner": "jest",
+        "strict": true,
+        "minimal": true,
+        "linter": "eslint",
+        "projectNameAndRootFormat": "as-provided",
+        "bundler": "tsc"
+      }
+    }
   }
 }
