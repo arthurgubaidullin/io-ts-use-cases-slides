@@ -1,1 +1,1 @@
-export * from './lib/documents';
+export * from './lib/create-document';
