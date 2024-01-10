@@ -1,1 +1,1 @@
-export * from './lib/exact-users';
+export * from './lib/exact-user';
